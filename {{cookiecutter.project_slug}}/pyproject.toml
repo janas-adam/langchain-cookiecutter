@@ -1,0 +1,66 @@
+[tool.poetry]
+name = "{{ cookiecutter.project_slug }}"
+version = "{{ cookiecutter.version }}"
+description = "{{ cookiecutter.description }}"
+authors = ["{{ cookiecutter.author_name }} <{{ cookiecutter.email }}>"]
+license = "{{ cookiecutter.license }}"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.0"
+environs = "11.0.0"
+langchain = "0.1.12"
+streamlit = "1.32.2"
+openai = "1.30.5"
+tiktoken = "0.7.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "0.2.1"
+black = "24.1.0"
+pre-commit = "3.6.2"
+isort = "5.13.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.black]
+line-length = 120
+target-version = ['py311']
+include = '\.pyi?$'
+exclude-extend = '''
+/venv
+/.venv
+/__pycache__
+/.mypy_cache
+/.pytest_cache
+'''
+
+[tool.ruff]
+line-length = 120
+select = ["E", "F", "UP", "I"]
+ignore = ["E501"]
+fixable = ["A", "B", "C", "D", "E", "F", "I"]
+exclude = [
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".mypy_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "migrations",
+    "__pypackages__",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+
+[tool.ruff.isort]
+section-order = ["future", "standard-library", "third-party",  "first-party", "local-folder"]

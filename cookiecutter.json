@@ -1,0 +1,10 @@
+{
+  "project_name": "LangChain Application",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+  "author_name": "Your Name",
+  "email": "your_email@example.com",
+  "description": "A LangChain-based project for NLP applications.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "app_port": "8501"
+}
