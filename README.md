@@ -1,5 +1,5 @@
-# LangChain Cookiecutter 🦜
-LangChain Cookiecutter is a streamlined project template designed to help you rapidly kickstart your AI/ML applications using LangChain and Streamlit.
+# LangChain Streamlit Cookiecutter 🦜⚡
+langchain-streamlit-cookiecutter is a streamlined project template designed to help you rapidly kickstart your AI/ML applications using LangChain and Streamlit.
 
 ## Launch ✨
 
